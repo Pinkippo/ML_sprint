@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Input Form</title>
+  </head>
+  <body>
+    <h1>Input Form</h1>
+    <form method="POST" action="/predict">
+      <label for="date">Date</label>
+      <input type="number" name="date" id="date" required><br>
+
+      <label for="day_of_week">Day of week</label>
+      <input type="number" name="day_of_week" id="day_of_week" required><br>
+
+      <label for="is_weekend">Is weekend</label>
+      <input type="number" name="is_weekend" id="is_weekend" required><br>
+
+      <label for="is_holiday">Is holiday</label>
+      <input type="number" name="is_holiday" id="is_holiday" required><br>
+
+      <label for="temperature">Temperature</label>
+      <input type="number" step="0.1" name="temperature" id="temperature" required><br>
+
+      <label for="is_start_of_semester">Is start of semester</label>
+      <input type="number" name="is_start_of_semester" id="is_start_of_semester" required><br>
+
+      <label for="is_during_semester">Is during semester</label>
+      <input type="number" name="is_during_semester" id="is_during_semester" required><br>
+
+      <label for="month">Month</label>
+      <input type="number" name="month" id="month" required><br>
+
+      <label for="hour">Hour</label>
+      <input type="number" name="hour" id="hour" required><br>
+
+      <label for="day">Day</label>
+      <input type="number" name="day" id="day" required><br>
+
+      <label for="minute">Minute</label>
+      <input type="number" name="minute" id="minute" required><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
