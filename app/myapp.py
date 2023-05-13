@@ -6,11 +6,11 @@ import numpy as np
 app = Flask(__name__)
 
 # 피클 파일에서 훈련된 모델을 로드
-with open('RFR_GYM_model.pkl', 'rb') as f:
+with open('RFR_GYM_model_v2.pkl', 'rb') as f:
     model = pickle.load(f)
 
 # 피클 파일에서 스케일러 객체 로드
-with open('RFR_GYM_scaler.pkl', 'rb') as f:
+with open('RFR_GYM_scaler_v2.pkl', 'rb') as f:
     scaler = pickle.load(f)
 
 
@@ -22,7 +22,6 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict():
     input_data = {
-        "date": request.form['date'],
         "day_of_week": request.form['day_of_week'],
         "is_weekend": request.form['is_weekend'],
         "is_holiday": request.form['is_holiday'],
@@ -41,7 +40,7 @@ def predict():
     test_predict = scaler.transform(input_data_arr.reshape(1, -1))
 
     # 예측 수행
-    prediction = model.predict(test_predict)
+    prediction = int(model.predict(test_predict))
 
     #웹 페이지 리턴
     return render_template('prediction.html', prediction=prediction)
