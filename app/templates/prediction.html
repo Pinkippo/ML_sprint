@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Prediction Result</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f2f2f2;
-      }
-      h1 {
-        text-align: center;
-        color: #333333;
-      }
-      p {
-        font-size: 18px;
-        color: #555555;
-        text-align: center;
-        margin-top: 50px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>예상 사용 인원은? : {{ prediction }}</h1>
-  </body>
+<head>
+	<meta charset="UTF-8">
+	<title>예측 결과</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			font-size: 36px;
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+		.result {
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			padding: 20px;
+			text-align: center;
+		}
+		.result h2 {
+			font-size: 28px;
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>현재 인하짐 사용 인원은 어떻게 될까요?</h1>
+	<div class="container">
+		<div class="result">
+			<h2>현재 인하짐은 {{ prediction }} 명이 이용하고 있을거 같네요!!</h2>
+		</div>
+	</div>
+</body>
 </html>
-
-
-
-
-
-
